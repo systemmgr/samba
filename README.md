@@ -15,11 +15,11 @@ pacman -S samba
   
 Automatic install/update:
 ```
-sudo bash -c "$(curl -LSs https://github.com/casjay-dotfiles/samba/raw/master/install.sh)"
+sudo bash -c "$(curl -LSs https://github.com/systemmgr/samba/raw/master/install.sh)"
 ```
 Manual install:
 ```
-sudo git clone https://github.com/casjay-dotfiles/samba "/usr/local/etc/samba"
+sudo git clone https://github.com/systemmgr/samba "/usr/local/etc/samba"
 sudo ln -sf usr/local/etc/samba/smb.conf /etc/samba/smb.conf
 ```
   
