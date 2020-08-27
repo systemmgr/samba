@@ -34,8 +34,6 @@ fi
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-_systemmgr_noupdate
-
 # Make sure the scripts repo is installed
 
 scripts_check
@@ -64,6 +62,9 @@ APPVERSION="$(curl -LSs ${SYSTEMMGRREPO:-https://github.com/systemmgr}/$APPNAME/
 # if installing system wide - change to system_installdirs
 
 systemmgr_installer
+
+# Never update
+systemmgr_noupdate
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
