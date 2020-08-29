@@ -1,31 +1,32 @@
 ## samba  
   
-the standard Windows interoperability suite of programs for Linux and Unix  
+The standard Windows interoperability suite of programs for Linux and Unix  
   
-requires:    
+Requires:  
+
+```shell
+sudo bash -c "$(curl -LSs https://github.com/systemmgr/installer/raw/master/install.sh)"
 ```
-apt install samba
-```  
+
+Automatic:
+
+```shell
+bash -c "$(curl -LSs https://github.com/systemmgr/samba/raw/master/install.sh)"
 ```
-yum install samba
-```  
+
+Install:
+
+```shell
+sudo systemmgr install samba
 ```
-pacman -S samba
-```  
-  
-Automatic install/update:
+
+Update:
+
+```shell
+sudo systemmgr update samba
 ```
-sudo bash -c "$(curl -LSs https://github.com/systemmgr/samba/raw/master/install.sh)"
-```
-Manual install:
-```
-sudo git clone https://github.com/systemmgr/samba "/usr/local/etc/samba"
-sudo ln -sf usr/local/etc/samba/smb.conf /etc/samba/smb.conf
-```
-  
-  
+
 <p align=center>
   <a href="https://wiki.archlinux.org/index.php/samba" target="_blank">samba wiki</a>  |  
   <a href="http://samba.org" target="_blank">samba site</a>
-</p>  
-    
+</p>
