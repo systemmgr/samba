@@ -101,7 +101,7 @@ failexitcode
 # run post install scripts
 
 run_postinst() {
-  systemmgr_run_post
+  systemmgr_run_postinst
   ln_sf $APPDIR/smb.conf /etc/samba/smb.conf
   devnull systemctl enable --now smbd nmbd || devnull systemctl enable --now smb nmb
   devnull systemctl restart smbd nmbd || devnull systemctl restart smb nmb
