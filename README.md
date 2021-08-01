@@ -5,13 +5,13 @@ The standard Windows interoperability suite of programs for Linux and Unix
 Requires:  
 
 ```shell
-sudo bash -c "$(curl -LSs https://github.com/systemmgr/installer/raw/master/install.sh)"
+sudo bash -c "$(curl -LSs https://github.com/systemmgr/installer/raw/main/install.sh)"
 ```
 
 Automatic:
 
 ```shell
-bash -c "$(curl -LSs https://github.com/systemmgr/samba/raw/master/install.sh)"
+bash -c "$(curl -LSs https://github.com/systemmgr/samba/raw/main/install.sh)"
 ```
 
 Install:
