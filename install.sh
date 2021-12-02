@@ -134,6 +134,7 @@ fi
 run_postinst() {
   systemmgr_run_post
   cp_rf "$APPDIR/smb.conf" /etc/samba/smb.conf
+  system_service_enable samba
   system_service_enable smbd nmbd || system_service_enable smb nmb
   system_service_restart smbd nmbd || system_service_restart smb nmb
   touch /etc/samba/smb.local.conf
