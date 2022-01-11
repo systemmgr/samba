@@ -133,10 +133,14 @@ fi
 # run post install scripts
 run_postinst() {
   systemmgr_run_post
-  cp_rf "$APPDIR/smb.conf" /etc/samba/smb.conf
-  system_service_enable samba
-  system_service_enable smbd nmbd || system_service_enable smb nmb
-  system_service_restart smbd nmbd || system_service_restart smb nmb
+  cp_rf "$APPDIR/smb.conf" "/etc/samba/smb.conf"
+  if system_service_enable samba; then
+    system_service_restart samba
+  elif system_service_enable smbd nmbd; then
+    system_service_restart smbd nmbd
+  elif system_service_enable smb nmb; then
+    system_service_restart smb nmb
+  fi
   touch /etc/samba/smb.local.conf
 }
 #
