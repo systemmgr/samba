@@ -2,3 +2,5 @@
 ignoredirmessage
 
 smb.local.conf
+# ignore commit message
+.gitcommit
